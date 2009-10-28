@@ -15,7 +15,7 @@ Release: %{release}
 Source0: %{name}-%{snapshot}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: noarch
-BuildRequires: libxml2
+BuildRequires: libxml2-utils
 
 %description
 The mobile-broadband-provider-info package contains listings of mobile
