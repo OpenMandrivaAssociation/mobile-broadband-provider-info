@@ -14,7 +14,7 @@ URL: http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders
 Release: %{release}
 Source0: %{name}-%{snapshot}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-
+BuildArch: noarch
 BuildRequires: libxml2
 
 %description
