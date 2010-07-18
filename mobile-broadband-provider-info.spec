@@ -1,6 +1,6 @@
 %define version 0.0
 %define rel 1
-%define snapshot git20100125
+%define snapshot git20100510
 %define release %mkrel 0.%{snapshot}.%{rel}
 
 %define sversion %{version}%{snapshot}
@@ -12,7 +12,7 @@ Version: %{version}
 License: Public Domain
 URL: http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders
 Release: %{release}
-Source0: %{name}-%{snapshot}.tar.gz
+Source0: %{name}-%{snapshot}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: noarch
 BuildRequires: libxml2-utils
