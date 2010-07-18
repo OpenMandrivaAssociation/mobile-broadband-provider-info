@@ -1,9 +1,10 @@
 %define version 0.0
 %define rel 1
-%define snapshot git20100510
-%define release %mkrel 0.%{snapshot}.%{rel}
+%define snapshot 20100510
+%define gitrel git%{snapshot}
+%define release %mkrel 0.%{gitrel}.%{rel}
 
-%define sversion %{version}%{snapshot}
+%define sversion %{version}%{gitrel}
 
 Name: mobile-broadband-provider-info
 Summary: Mobile broadband providers database
