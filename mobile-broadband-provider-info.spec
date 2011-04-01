@@ -1,19 +1,11 @@
-%define version 0.0
-%define rel 1
-%define snapshot 20100510
-%define gitrel git%{snapshot}
-%define release %mkrel 0.%{gitrel}.%{rel}
-
-%define sversion %{version}%{gitrel}
-
 Name: mobile-broadband-provider-info
 Summary: Mobile broadband providers database
 Group: System/Configuration/Other
-Version: %{version}
+Version: 20110218
+Release: %mkrel 1
 License: Public Domain
 URL: http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders
-Release: %{release}
-Source0: %{name}-%{snapshot}.tar.bz2
+Source0: http://ftp.gnome.org/pub/gnome/sources/%{name}/%{version}/%{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: noarch
 BuildRequires: libxml2-utils
@@ -23,10 +15,9 @@ The mobile-broadband-provider-info package contains listings of mobile
 broadband (3G) providers and associated network and plan information.
 
 %prep
-%setup -q -n %{name}-%{snapshot}
+%setup -q -n %{name}-%{version}
 
 %build
-autoreconf -fi
 %configure2_5x
 %make
 
