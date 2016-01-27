@@ -25,7 +25,7 @@ The pkgconfig for %{name}.
 %setup -q
 
 %build
-%configure2_5x
+%configure
 %make
 
 %install
