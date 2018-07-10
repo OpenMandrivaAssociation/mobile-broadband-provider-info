@@ -1,7 +1,7 @@
 Summary:	Mobile broadband providers database
 Name:		mobile-broadband-provider-info
 Group:		System/Configuration/Other
-Version:	20151214
+Version:	20170310
 Release:	1
 License:	Public Domain
 Url:		http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders
