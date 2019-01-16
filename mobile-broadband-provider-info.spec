@@ -26,10 +26,10 @@ The pkgconfig for %{name}.
 
 %build
 %configure
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %{_datadir}/%{name}/*
