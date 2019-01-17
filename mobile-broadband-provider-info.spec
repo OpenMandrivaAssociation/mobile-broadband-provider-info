@@ -2,7 +2,7 @@ Summary:	Mobile broadband providers database
 Name:		mobile-broadband-provider-info
 Group:		System/Configuration/Other
 Version:	20190116
-Release:	1
+Release:	0.1
 License:	Public Domain
 Url:		http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/%{version}/%{name}-%{version}.tar.xz
@@ -22,14 +22,14 @@ Requires: %{name} = %{EVRD}
 The pkgconfig for %{name}.
 
 %prep
-%autosetup -p1
+%setup -q
 
 %build
 %configure
-%make_build
+%make
 
 %install
-%make_install
+%makeinstall_std
 
 %files
 %{_datadir}/%{name}/*
