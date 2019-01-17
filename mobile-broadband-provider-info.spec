@@ -13,16 +13,16 @@ BuildRequires:	libxml2-utils
 The mobile-broadband-provider-info package contains listings of mobile
 broadband (3G) providers and associated network and plan information.
 
-%package	devel
+%package devel
 Summary:	The pkgconfig for %{name}
 Group:		Development/Other
-Requires:	%{name} = %{version}-%{release}
+Requires: %{name} = %{EVRD}
 
-%description	devel
+%description devel
 The pkgconfig for %{name}.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %configure
