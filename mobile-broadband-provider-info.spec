@@ -1,7 +1,7 @@
 Summary:	Mobile broadband providers database
 Name:		mobile-broadband-provider-info
 Group:		System/Configuration/Other
-Version:	20170310
+Version:	20190116
 Release:	1
 License:	Public Domain
 Url:		http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders
@@ -13,23 +13,23 @@ BuildRequires:	libxml2-utils
 The mobile-broadband-provider-info package contains listings of mobile
 broadband (3G) providers and associated network and plan information.
 
-%package	devel
+%package devel
 Summary:	The pkgconfig for %{name}
 Group:		Development/Other
-Requires:	%{name} = %{version}-%{release}
+Requires: %{name} = %{EVRD}
 
-%description	devel
+%description devel
 The pkgconfig for %{name}.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %configure
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %{_datadir}/%{name}/*
