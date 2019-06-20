@@ -8,6 +8,7 @@ Url:		http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/%{version}/%{name}-%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	libxml2-utils
+BuildRequires:  xsltproc
 
 %description
 The mobile-broadband-provider-info package contains listings of mobile
