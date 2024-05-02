@@ -7,6 +7,7 @@ License:	Public Domain
 Url:		https://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders
 Source0:	https://ftp.gnome.org/pub/gnome/sources/%{name}/%{version}/%{name}-%{version}.tar.xz
 BuildArch:	noarch
+BuildRequires:  meson
 BuildRequires:	libxml2-utils
 BuildRequires:  xsltproc
 
@@ -26,11 +27,11 @@ The pkgconfig for %{name}.
 %autosetup -p1
 
 %build
-%configure
-%make_build
+%meson
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 %files
 %{_datadir}/%{name}/*
